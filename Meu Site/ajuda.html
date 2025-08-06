@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ajuda - Morute Store</title>
+
+  <link rel="icon" href="icone.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="bg-dark text-white p-3 d-flex justify-content-between align-items-center">
+    <a href="index.html" class="text-white text-decoration-none fs-4">Morute Store</a>
+    <h2 class="fs-5">Central de Ajuda</h2>
+    <a href="index.html" class="btn btn-outline-light"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+  </header>
+
+  <main class="container my-5">
+    <h3 class="mb-4">Perguntas Frequentes (FAQ)</h3>
+
+    <div class="accordion" id="faqAccordion">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#resposta1">
+            Como posso rastrear meu pedido?
+          </button>
+        </h2>
+        <div id="resposta1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Você receberá um código de rastreio por e-mail assim que seu pedido for enviado.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#resposta2">
+            Quais formas de pagamento são aceitas?
+          </button>
+        </h2>
+        <div id="resposta2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Aceitamos Pix, cartão de crédito, boleto e PayPal.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#resposta3">
+            Posso trocar ou devolver um produto?
+          </button>
+        </h2>
+        <div id="resposta3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sim, você pode solicitar troca ou devolução em até 7 dias após o recebimento.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="text-center p-4 bg-dark text-white mt-5">
+    © 2025 Morute Store - Todos os direitos reservados.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

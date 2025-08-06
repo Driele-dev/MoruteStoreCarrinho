@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morute Store</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Ícone da aba -->
+  <link rel="icon" href="icone.jpg" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <section>
+      <a href="#" class="logo">
+        <img src="icone.jpg" alt="Logo" />
+      </a>
+      <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="contato.html">Contato</a>
+        <a href="#about">Sobre</a>
+        <a href="#menu">Menu</a>
+        <a href="#review">Avaliações</a>
+        <a href="#address">Endereço</a>
+        <a href="ajuda.html">Ajuda</a>
+      </nav>
+     <div class="icons">
+  <i class="fa-solid fa-magnifying-glass"></i>
+ <a href="carrinho.html" class="position-relative">
+  <i class="fa-solid fa-cart-shopping"></i>
+  <span id="contador-carrinho" 
+        style="position: absolute; top: -8px; right: -8px; background: red; color: white; 
+               border-radius: 50%; padding: 2px 6px; font-size: 12px;">0</span>
+</a>
+
+
+      </div>
+
+      <div id="acessibilidade">
+        <button onclick="aumentarFonte()">A +</button>
+        <button onclick="diminuirFonte()">A -</button>
+        <button id="alto-contraste">Alto Contraste</button>
+      </div>
+
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+      </script>
+    </section>
+  </header>
+
+  <main>
+    <!-- Carousel Bootstrap -->
+    <section id="home">
+      <div id="carouselMorute" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="Morute Store.png" class="d-block w-100" alt="Banner 1">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Morute Store</h3>
+              <p>Estilo gótico com identidade e atitude.</p>
+              <a href="#menu" class="btn btn-dark">Pegue o seu agora</a>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="Goth store.jpg" class="d-block w-100" alt="Banner 2">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Nova Coleção</h3>
+              <p>Peças únicas e exclusivas.</p>
+              <a href="#menu" class="btn btn-dark">Confira</a>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="banner3.jpg" class="d-block w-100" alt="Banner 3">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Seu estilo, sua essência</h3>
+              <p>Moda gótica com alma brasileira.</p>
+              <a href="#menu" class="btn btn-dark">Explore</a>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMorute" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMorute" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </section>
+
+    
+<!-- Sobre nós -->
+<section class="about" id="about">
+  <h2 class="title">Sobre <span>Nós</span></h2>
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <img src="morcego.gif" alt="Sobre nós" class="img-fluid" />
+    </div>
+    <div class="col-md-6">
+      <h3>O que faz nossa loja ser a mais utilizada no Brasil.</h3>
+      <p>A Morute Store é a melhor loja de roupa gótica do Brasil porque une estilo autêntico, qualidade impecável e identidade forte em cada peça. Mais do que moda, oferecemos atitude — com coleções exclusivas que respeitam a essência do universo gótico e valorizam quem vive intensamente cada detalhe da sua estética. Aqui, você não encontra só roupas: encontra um estilo de vida.</p>
+      
+      
+      <div class="ratio ratio-16x9 mt-3">
+        <iframe src="https://www.youtube.com/embed/0WJ7WD_9GfA" title="Vídeo Morute Store" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Menu -->
+    <section class="menu" id="menu">
+  <h2 class="title">Nossa <span>Categoria</span></h2>
+  <div class="box-container">
+
+    <div class="box">
+      <img src="saia longa.jpg" alt="Saia Longa" />
+      <h3>Saia Longa Gothic Romance</h3>
+      <div class="price">R$ 105,30 <span>R$ 120,99</span></div>
+      <a href="#" class="btn" 
+         onclick="adicionarCarrinho('Saia Longa Gothic Romance', 105.30, 'saia longa.jpg'); return false;">
+        Adicione ao Carrinho
+      </a>
+    </div>
+
+    <div class="box">
+      <img src="corset.jpg" alt="Corset" />
+      <h3>Corset Gótico Detalhado</h3>
+      <div class="price">R$ 78,90 <span>R$ 95,00</span></div>
+      <a href="#" class="btn" 
+         onclick="adicionarCarrinho('Corset Gótico Detalhado', 78.90, 'corset.jpg'); return false;">
+        Adicione ao Carrinho
+      </a>
+    </div>
+
+    <div class="box">
+      <img src="botas.jpg" alt="Botas" />
+      <h3>Bota de Cruz Black</h3>
+      <div class="price">R$ 299,00 <span>R$ 350,00</span></div>
+      <a href="#" class="btn" 
+         onclick="adicionarCarrinho('Bota de Cruz Black', 299.00, 'botas.jpg'); return false;">
+        Adicione ao Carrinho
+      </a>
+    </div>
+
+    <div class="box">
+      <img src="sapatilha.jpg" alt="Sapatilha" />
+      <h3>Sapatilha Gótica Metálica</h3>
+      <div class="price">R$ 120,00 <span>R$ 150,00</span></div>
+      <a href="#" class="btn" 
+         onclick="adicionarCarrinho('Sapatilha Gótica Metálica', 120.00, 'sapatilha.jpg'); return false;">
+        Adicione ao Carrinho
+      </a>
+    </div>
+
+    <div class="box">
+      <img src="colar.jpg" alt="Colar" />
+      <h3>Colar Gótico</h3>
+      <div class="price">R$ 10,00 <span>R$ 25,00</span></div>
+      <a href="#" class="btn" 
+         onclick="adicionarCarrinho('Colar Gótico', 10.00, 'colar.jpg'); return false;">
+        Adicione ao Carrinho
+      </a>
+    </div>
+
+  </div>
+</section>
+<script>
+  function adicionarCarrinho(nome, preco, img) {
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    const index = carrinho.findIndex(item => item.nome === nome);
+
+    if (index > -1) {
+      carrinho[index].quantidade++;
+    } else {
+      carrinho.push({ nome, preco, quantidade: 1, img });
+    }
+
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    alert(nome + " adicionado ao carrinho!");
+    atualizarContador();
+  }
+
+  function atualizarContador() {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const total = carrinho.reduce((acc, item) => acc + item.quantidade, 0);
+    const contador = document.getElementById('contador-carrinho');
+    if (contador) {
+      contador.textContent = total;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', atualizarContador);
+</script>
+
+
+
+      </div>
+    </section>
+
+    <!-- Avaliações -->
+    <section class="review" id="review">
+      <h2 class="title">Nossos <span>Clientes</span></h2>
+      <div class="box-container">
+
+        <div class="box">
+          <img src="symbol.png" alt="" />
+          <p>Um Arraso</p>
+          <img src="Elvira.jpg" alt="Cliente Elvira" class="user" />
+          <h3>Elvira</h3>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="symbol.png" alt="" />
+          <p>Terrível! Amei</p>
+          <img src="Morticia.jpg" alt="Cliente Morticia" class="user" />
+          <h3>Morticia</h3>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="symbol.png" alt="" />
+          <p>BeetleJuice roubou minhas bot...</p>
+          <img src="Lydia.jpg" alt="Cliente Lydia" class="user" />
+          <h3>Lydia</h3>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-center my-5">
+  <h3>Ouça nossa trilha gótica exclusiva 🎶</h3>
+  
+  <!-- Botão customizado -->
+  <button id="playPauseBtn" class="btn btn-dark">
+    ▶️ Tocar Música
+  </button>
+  
+  <!-- Áudio escondido -->
+  <audio id="audioPlayer" src="s"></audio>
+</section>
+
+<script>
+  const btn = document.getElementById('playPauseBtn');
+  const audio = document.getElementById('audioPlayer');
+
+  btn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = '⏸️ Pausar Música';
+    } else {
+      audio.pause();
+      btn.textContent = '▶️ Tocar Música';
+    }
+  });
+
+  // Se a música acabar, troca o texto do botão de volta
+  audio.addEventListener('ended', () => {
+    btn.textContent = '▶️ Tocar Música';
+  });
+</script>
+
+
+    <!-- Endereço -->
+    <section class="address" id="address">
+      <h2 class="title">Nosso <span>Endereço</span></h2>
+      <p>Estamos localizados ao lado da Loja Reversa!</p>
+      <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen
+        loading="lazy"></iframe>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <a href="#" class="logo">
+        <img src="icone.jpg" alt="Logo" />
+      </a>
+      <div class="share">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+      <nav class="footer-nav">
+        <a href="#">Home</a>
+        <a href="#about">Sobre</a>
+        <a href="#menu">Menu</a>
+        <a href="#review">Avaliações</a>
+        <a href="#address">Endereço</a>
+      </nav>
+      <p class="footer-copy">© 2025 Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script personalizado -->
+  <script src="script.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+</body>
+
+</html>
